@@ -4,44 +4,79 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .contenedor{
     background: white;
     padding: 25px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0px 0px 10px gray;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 
 h1{
     text-align: center;
     color: #2e7d32;
+    margin-bottom: 20px;
 }
 
 label{
     display: block;
     margin-top: 12px;
     font-weight: bold;
+    color: #333;
 }
 
-input, select, button{
+input,
+select,
+button{
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
+/* Efecto al seleccionar */
+input:focus,
+select:focus{
+    outline: none;
+    border: 2px solid #2e7d32;
+    background-color: #f1fff1;
+}
+
+/* Validación visual */
+input:valid{
+    border: 2px solid green;
+}
+
+input:invalid{
+    border: 2px solid red;
+}
+
+/* Texto del rango */
+p{
+    font-weight: bold;
+    color: #2e7d32;
+    margin-top: 10px;
+}
+
+/* Botón */
 button{
     background-color: #2e7d32;
     color: white;
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 button:hover{
     background-color: #1b5e20;
+    transform: scale(1.03);
 }
