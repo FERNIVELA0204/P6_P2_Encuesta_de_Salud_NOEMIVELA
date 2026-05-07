@@ -11,25 +11,29 @@
     <div class="contenedor">
         <h1>Encuesta de Salud</h1>
 
-        <form>
+        <form id="formulario">
 
-            <label>Nombre:</label>
+            <!-- Nombre -->
+            <label>Nombre completo:</label>
             <input type="text" required>
 
+            <!-- Edad -->
             <label>Edad:</label>
             <input type="number" min="1" max="120" required>
 
-            <label>Peso:</label>
+            <!-- Peso -->
+            <label>Peso (kg):</label>
             <input type="number" min="20" max="250" required>
 
+            <!-- Nivel de dolor -->
             <label>Nivel de dolor:</label>
             <input type="range" min="0" max="10" value="5" id="dolor">
+            <p>Nivel seleccionado: <span id="valorDolor">5</span></p>
 
-            <p>Nivel: <span id="valor">5</span></p>
-
+            <!-- Tipo de sangre -->
             <label>Tipo de sangre:</label>
             <select required>
-                <option value="">Selecciona</option>
+                <option value="">Selecciona una opción</option>
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>
@@ -39,6 +43,16 @@
                 <option>O+</option>
                 <option>O-</option>
             </select>
+
+            <!-- Código Postal -->
+            <label>Código Postal:</label>
+            <input 
+                type="text"
+                pattern="[0-9]{5}"
+                maxlength="5"
+                placeholder="Ejemplo: 12345"
+                required
+            >
 
             <button type="submit">Enviar</button>
 
